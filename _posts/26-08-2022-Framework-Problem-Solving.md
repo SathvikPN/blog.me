@@ -13,16 +13,16 @@ Programming == Problem solving applied to Software domain == meta skill
 
 SWE Top priority qualification == Problem Solving (followed by language proficiency, debugging, system design)
 
-"If you can’t explain something in simple terms, you don’t understand it." - Richard Feynman
+> "If you can’t explain something in simple terms, you don’t understand it." - Richard Feynman
 
 Stuck at even sub-problem. It's fair and expectable. Try catching interest over irritation.
 
-[Debug] [Re-assess approach] [Research google for sub-problems]
+1. Debug
+2. Re-assess approach
+3. Research google for sub-problems
 
-[Reminder]
-
+**Reminder**
 - Each time you learn something
-
 - Each time, you’ll develop strength, wisdom, and perspective.
 
 Go for it.
