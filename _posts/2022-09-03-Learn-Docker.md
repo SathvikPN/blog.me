@@ -76,3 +76,4 @@ docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started
 # to know, Where is Docker actually storing my data when I use a named volume
 docker volume inspect todo-db 
 ```
+> as of now we have application that can survive container restarts
