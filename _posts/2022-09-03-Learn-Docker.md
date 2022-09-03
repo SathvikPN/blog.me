@@ -88,3 +88,5 @@ docker run -dp 3000:3000 -v /path/to/todo-db/on/host : /path/on/container
 - we control the exact mountpoint on the host.
 - We can use this to persist data, but it’s often used to provide additional data into containers.
 - Donot populates new volume with container contents.
+
+Using bind mounts is very common for local development setups. The advantage is that the dev machine doesn’t need to have all of the build tools and environments installed. With a single `docker run` command, the dev environment is pulled and ready to go. (related: `docker compose`)
