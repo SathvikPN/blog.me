@@ -111,3 +111,12 @@ docker run -d \
 docker exec -it <mysql-container-id> mysql -u root -p
 ```
 Learn more: [Container networking](https://docs.docker.com/get-started/07_multi_container/)
+
+### Docker Compose
+Docker Compose is a tool that was developed to help define and share multi-container applications. 
+
+With Compose, we can create a YAML file to define the services and with a single command, can spin everything up or tear it all down.
+
+The big advantage of using Compose is you can define your application stack in a file
+
+Learn More: [docker-compose.yml](The big advantage of using Compose is you can define your application stack in a file)
