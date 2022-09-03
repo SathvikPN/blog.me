@@ -65,15 +65,26 @@ If a directory in the container is mounted, changes in that directory are also s
 
 If we mount that same directory across container restarts, we’d see the same files.
 
+Types: Named Volume, Bind mounts [[Official Comparison]](https://docs.docker.com/get-started/06_bind_mounts/#quick-volume-type-comparisons)
+
 **Named Volume**
 Docker maintains the physical location on the disk and you only need to remember the name of the volume
 
 ```bash
+# Named volume ---------------------------------------------------------------------------------
 docker volume create todo-db
 docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started
 
 # each container restart with volume mounted, gets the data persisted at that volume
 # to know, Where is Docker actually storing my data when I use a named volume
 docker volume inspect todo-db 
+
+# Bind Mount ----------------------------------------------------------------------------------
+docker run -dp 3000:3000 -v /path/to/todo-db/on/host : /path/on/container
 ```
 > as of now we have application that can survive container restarts
+
+**Bind Mounts**
+- we control the exact mountpoint on the host.
+- We can use this to persist data, but it’s often used to provide additional data into containers.
+- Donot populates new volume with container contents.
