@@ -56,24 +56,23 @@ docker rm <the-container-id>
 docker run -dp 3000:3000 getting-started
 ```
 
-**Container Filesystem**
+> While containers can create, update, and delete files, those changes are lost when the container is removed and all changes are isolated to that container. With volumes, we can change all of this.
 
-When a container runs, it uses the various layers from an image for its filesystem. 
+### Volumes
+Volumes provide the ability to connect specific filesystem paths of the container back to the host machine. 
 
-Each container also gets its own “scratch space” to create/update/remove files. 
+If a directory in the container is mounted, changes in that directory are also seen on the host machine. 
 
-Any changes won’t be seen in another container, even if they are using the same image.
+If we mount that same directory across container restarts, we’d see the same files.
+
+**Named Volume**
+Docker maintains the physical location on the disk and you only need to remember the name of the volume
 
 ```bash
-# start a ubuntu container. create file data.txt with a random no. 1-10000
-docker run -d ubuntu bash -c "shuf -i 1-10000 -n 1 -o /data.txt && tail -f /dev/null"
-# second part of bash command:  simply watching a file to keep the container running.
+docker volume create todo-db
+docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started
 
-docker ps  # list containers
-docker exec <container-id> cat /data.txt
-
-# verify that starting a new container from common image has no datafile that created only in previous container
-docker run -it ubuntu ls /
+# each container restart with volume mounted, gets the data persisted at that volume
+# to know, Where is Docker actually storing my data when I use a named volume
+docker volume inspect todo-db 
 ```
-
-
