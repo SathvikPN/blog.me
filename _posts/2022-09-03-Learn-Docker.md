@@ -55,3 +55,25 @@ docker rm <the-container-id>
 # note: data didn't persist from old to new container when our app is updated.
 docker run -dp 3000:3000 getting-started
 ```
+
+**Container Filesystem**
+
+When a container runs, it uses the various layers from an image for its filesystem. 
+
+Each container also gets its own “scratch space” to create/update/remove files. 
+
+Any changes won’t be seen in another container, even if they are using the same image.
+
+```bash
+# start a ubuntu container. create file data.txt with a random no. 1-10000
+docker run -d ubuntu bash -c "shuf -i 1-10000 -n 1 -o /data.txt && tail -f /dev/null"
+# second part of bash command:  simply watching a file to keep the container running.
+
+docker ps  # list containers
+docker exec <container-id> cat /data.txt
+
+# verify that starting a new container from common image has no datafile that created only in previous container
+docker run -it ubuntu ls /
+```
+
+
