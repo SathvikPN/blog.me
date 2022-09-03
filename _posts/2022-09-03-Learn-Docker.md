@@ -19,6 +19,8 @@ Each instruction in a Dockerfile creates a layer in the image. When you change t
 
 ### Containers
 
+a container is a sandboxed process on your machine that is isolated from all other processes on the host machine
+
 A container is a runnable instance of an image.
 
 You can connect a container to one or more networks, attach storage to it, or even create a new image based on its current state.
