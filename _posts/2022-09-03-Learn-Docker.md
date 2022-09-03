@@ -90,3 +90,24 @@ docker run -dp 3000:3000 -v /path/to/todo-db/on/host : /path/on/container
 - Donot populates new volume with container contents.
 
 Using bind mounts is very common for local development setups. The advantage is that the dev machine doesn’t need to have all of the build tools and environments installed. With a single `docker run` command, the dev environment is pulled and ready to go. (related: `docker compose`)
+
+
+### Multi-container Applications
+
+> If two containers are on the same network, they can talk to each other. If they aren’t, they can’t.
+
+```bash
+# create network
+docker network create todo-app
+
+# start mySQL container
+docker run -d \
+     --network todo-app --network-alias mysql \
+     -v todo-mysql-data:/var/lib/mysql \
+     -e MYSQL_ROOT_PASSWORD=secret \
+     -e MYSQL_DATABASE=todos \
+     mysql:5.7
+# verify db up and running
+docker exec -it <mysql-container-id> mysql -u root -p
+```
+Learn more: [Container networking](https://docs.docker.com/get-started/07_multi_container/)
