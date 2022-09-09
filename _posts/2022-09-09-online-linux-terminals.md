@@ -12,15 +12,25 @@ password: <pwd>
 
 `alias` vs `export` vs `variables` vs `functions`
 
+In the variable form, it is expanded and evaluated. Ref via $
+
+alias form, only expanded if it is the first word. Ref via name directly
+
 ## Watch out
 
 `bc`	Arbitrary precision calculator language
 
-`cal` calendar
-
 `bzip2` Compress or decompress named file(s)
 
+`cal` calendar
 
+`cat` Concatenate and print (display) the content of files
+
+`cmp` Compare two files
+
+`cp` copy [`cp -iv` -interactive(overwrite case) -verbose] [-s symbolic-link] [-R recursive] [-f force_overwrite] [-b backup existing file as file~ before overwriting] [-p preserve_attributes like:timestamp, author ...] [-a archive]
+
+`csplit` split file by line no. [-f prefix_part_names]
 
 
 ## Note
@@ -36,8 +46,11 @@ grep <keyword> file.txt
 cat [-n <numbered_lines>] [-b <number_only_nonblank_lines>]
 ```
 
-A symlink (also called a symbolic link) is a type of file in Linux that points to another file or a folder on your computer. Symlinks are similar to shortcuts in Windows.
+A symlink (also called a symbolic link) is a type of file in Linux that points to another file or a folder on your computer. 
 
+> Symlinks are similar to shortcuts in Windows.
+
+mkdir: cannot create directory ‘tdir’: File exists
 
 
 
