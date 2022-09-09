@@ -8,3 +8,8 @@ password: <pwd>
 
 [webminal](https://www.webminal.org/) account with persistent storage across logins
 
+## Get These
+
+`alias` vs `export` vs `variables` vs `functions`
+
+
