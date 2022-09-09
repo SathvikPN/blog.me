@@ -32,6 +32,11 @@ alias form, only expanded if it is the first word. Ref via name directly
 
 `csplit` split file by line no. [-f prefix_part_names]
 
+`date`	Display or change the date & time
+
+`df`	Display free disk space
+
+`diff`	Display the differences between two files
 
 ## Note
 
