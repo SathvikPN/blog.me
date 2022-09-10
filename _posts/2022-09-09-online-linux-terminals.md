@@ -63,10 +63,54 @@ tail [-n last_n_lines] <file>
 
 `history` command history [CTRL+r reverse command search]
 
+`less` better than `more`
 
+`ls` 
+```bash
+# list dirs
+ls -d */ 
 
+# last modified time
+ls -t
 
+# list files including in subdirs
+ls -R 
+ls *
 
+# list all (including starting from .)
+ls -a
+
+# sort by file extension
+ls -X
+```
+
+`mkdir` 
+
+`mv -iv`
+
+`paste`
+
+`ping`
+
+`rm -iv`
+
+`scp` copies files between hosts on a network
+
+`sed` stream editor
+
+`sleep` [NUMBER [smhd]]...
+
+`sort`
+
+`source`
+
+`ssh`
+
+`tar` tape archive 
+```bash
+# -create -verbose -z zipped_compress -filename -x Xtract -t list_archive_content -r add_file_to_archive
+tar -cvf file.tar <req_files_dirs>  
+tar -cvfz file.tar.gz <files>
 
 
 
@@ -83,6 +127,7 @@ grep <keyword> file.txt
 cat [-n <numbered_lines>] [-b <number_only_nonblank_lines>]
 ```
 
+
 A symlink (also called a symbolic link) is a type of file in Linux that points to another file or a folder on your computer. 
 
 > Symlinks are similar to shortcuts in Windows.
@@ -90,12 +135,17 @@ A symlink (also called a symbolic link) is a type of file in Linux that points t
 mkdir: cannot create directory ‘tdir’: File exists
 
 ```bash
+# get empty dirs
+find . -type d -empty
+```
+```bash
 ^ --> ctrl
 ^c cancel current command (even if running)
 ^u erase current typed command
 ^k erase cmd after the cursor
 ^y getback last erased command
 ^l clear screen (not a cmd found in history but functionally equivalent to clear cmd)
+^r Search command in history
 works: Home_button(^a) End_button (^e)
 
 
