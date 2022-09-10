@@ -38,6 +38,14 @@ alias form, only expanded if it is the first word. Ref via name directly
 
 `diff`	Display the differences between two files
 
+`echo`
+
+`egrep` `fgrep`  `grep`
+
+`expr`
+
+
+
 ## Note
 
 ```bash
