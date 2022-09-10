@@ -20,7 +20,7 @@ alias form, only expanded if it is the first word. Ref via name directly
 
 `bc`	Arbitrary precision calculator language
 
-`bzip2` Compress or decompress named file(s)
+`bzip2` `gzip` `tar`
 
 `cal` calendar
 
@@ -44,6 +44,30 @@ alias form, only expanded if it is the first word. Ref via name directly
 
 `expr`
 
+`file`
+
+`find` ```find . -maxdepth 1 -type f -iname '*.SH' ! -iname 'c*'```
+
+`grep`
+```bash
+grep [-w whole word] [-i ignore_cases] [-r include_subdirs] [-v lines_not_contains] [-x exact_entire_line] [-l files] [-c count] [-B -A n linesBefore and After match] [-n line_no.] [-m n limit_match] <pattern> <files>
+```
+
+
+`head` 
+```bash
+head [-LINES_FROM_BEGINNING] [-n output_first_n_lines] [-v verbose_filename_header] <file>
+
+tail [-n last_n_lines] <file>  
+```
+
+`history` command history [CTRL+r reverse command search]
+
+
+
+
+
+
 
 
 ## Note
@@ -64,6 +88,15 @@ A symlink (also called a symbolic link) is a type of file in Linux that points t
 > Symlinks are similar to shortcuts in Windows.
 
 mkdir: cannot create directory ‘tdir’: File exists
+
+```bash
+^ --> ctrl
+^c cancel current command (even if running)
+^u erase current typed command
+^k erase cmd after the cursor
+^y getback last erased command
+^l clear screen (not a cmd found in history but functionally equivalent to clear cmd)
+works: Home_button(^a) End_button (^e)
 
 
 
