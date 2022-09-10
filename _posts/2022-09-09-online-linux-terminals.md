@@ -111,6 +111,25 @@ ls -X
 # -create -verbose -z zipped_compress -filename -x Xtract -t list_archive_content -r add_file_to_archive
 tar -cvf file.tar <req_files_dirs>  
 tar -cvfz file.tar.gz <files>
+```
+
+`tee` T shaped operation
+```bash
+wc -l file.txt | tee -a capture.txt
+tee passes the piped content(line count) to capture.txt (here append mode)(create capture if not exist)
+```
+`touch` change file timestamps or create empty file if not exist
+
+`type` describe cmd
+
+`uname` print sys-info (os, kernel, machine-hardware...)
+
+`watch`
+
+`yes <text>`  	Print a string until interrupted ( forever until killed ) (100% processor usage. Only for testing purposes)
+```bash
+yes Line OK. | head -10000 > file.txt
+```
 
 
 
