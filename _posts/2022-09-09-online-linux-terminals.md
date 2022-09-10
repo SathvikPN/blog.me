@@ -131,7 +131,8 @@ tee passes the piped content(line count) to capture.txt (here append mode)(creat
 yes Line OK. | head -10000 > file.txt
 ```
 
-
+Chat with logged in users
+`write` OR `talk`
 
 ## Note
 
