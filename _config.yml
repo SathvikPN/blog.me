@@ -1,13 +1,13 @@
-title: "Ala"
+title: "Sathvik's Blog"
 author: "Sathvik PN"
-description: "Thought waves that might resonate with junior software engineers." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+description: "My online scribble space as a junior software engineer." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
 # email: "example@mail.com"
 # twitter_username: "twitteruser"
 github_username: "SathvikPN"
-# linkedin_username: "linkedinuser"
+linkedin_username: "sathvik-p-n"
 #facebook_username: username
 #flickr_username: username
 #instagram_username: username
